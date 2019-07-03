@@ -14,6 +14,7 @@ class App extends Component{
 
     this.increment = this.increment.bind(this);
     this.decrement = this.decrement.bind(this);
+    this.delete = this.delete.bind(this);
   }
   
     increment(){
@@ -27,13 +28,21 @@ class App extends Component{
       this.setState({counter: this.state.counter-1});
       }
     }
-    
+
+    delete(){
+      let cardSetCopy = [...this.state.cardSet];
+      cardSetCopy.splice(this.state.counter,1);
+      this.setState( {cardSet: cardSetCopy} );
+    }
+   
+  
+
   render (){
     return (
       <div className="App">
           <nav className="navbar">Home</nav>
           <Card arrayC={this.state.cardSet} index={this.state.counter}/>
-          <Move increment={this.increment} decrement={this.decrement}/>
+          <Move increment={this.increment} decrement={this.decrement} delete={this.delete}/>
       </div>
       );
     }
