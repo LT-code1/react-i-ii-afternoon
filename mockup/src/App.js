@@ -17,7 +17,7 @@ class App extends Component{
     this.delete = this.delete.bind(this);
   }
   
-    increment(){
+    increment(){                                       //increment = () =>{       //omits binding
       if(this.state.counter < this.state.cardSet.length-1){
       this.setState({counter: this.state.counter+1});
       }

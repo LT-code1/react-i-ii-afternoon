@@ -37,6 +37,41 @@
   -webkit-align-items: center; /* Safari 7.0+ */
   display: flex;
   align-items: center;
+  background-color: lightblue;
+  height: 5vh;
+}
+
+.card {
+  height: vh;
+  display: flex;
+  background-color: black;
+  border: 2px solid red;
+  flex-direction: column;
+  align-items: center;
+}
+.innercard {
+  border: 2px solid rgb(0, 255, 128);
+  background-color: white;
+  display: flex; /* Safari */
+  flex-direction: column;
+  align-items: center; /* Safari 7.0+ */
+  display: flex;
+  height: 80%;
+  width:75%;
+}
+
+.cardnum {
+  border: 2px solid rgb(0, 255, 128);
+  background-color: white;
+  justify-content: flex-end;
+  display: flex;
+  position: absolute;
+  right: 15vw;
+ 
 }
 
 
+.first {
+ margin-top: 50px;
+ 
+}
